@@ -5,19 +5,17 @@ static void Main()
      
     System.Console.WriteLine("=== SISTEMA DE SOPORTE ACADÉMICO ===");
 
-     
-     
-      
+
       System.Console.WriteLine("\n--- Iniciando Registro de Solicitud  ---");
         string codigo = "", nombre = "", tipoConsulta = "", descripcion = "";
-
+         MostrarMenu();
       
       
-         System.Console.WriteLine("Ingrese Código de Estudiante (mínimo 6 caracteres): ");
+    System.Console.WriteLine("Ingrese Código de Estudiante (mínimo 6 caracteres): ");
          codigo = Console.ReadLine();
       
 
-         System.Console.WriteLine("Ingrese Nombre del Estudiante: ");
+     System.Console.WriteLine("Ingrese Nombre del Estudiante: ");
          nombre = Console.ReadLine();
 
            
@@ -35,7 +33,7 @@ static void Main()
  }
  static bool ValidarTipoConsulta(string tipo)
     {
-        if (tipo == "matrícula" || tipo == "pagos" || tipo == "constancia" || tipo == "plataforma" || tipo == "otro")
+        if (tipo == "matricula" || tipo == "pagos" || tipo == "constancia" || tipo == "plataforma" || tipo == "otros")
         {
             return true;
         }
@@ -43,5 +41,16 @@ static void Main()
         return false;
     }
 
+static void MostrarMenu()
+    {
+        Console.WriteLine("\nTipos de consulta válidos:");
+        Console.WriteLine("- matrícula\n- pagos\n- constancia\n- plataforma\n- otro");
+    }
+
+
+
+
 }
+
+
  
