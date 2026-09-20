@@ -14,9 +14,11 @@ static void Main()
     System.Console.WriteLine("Ingrese Código de Estudiante (mínimo 6 caracteres): ");
          codigo = Console.ReadLine();
       
-
-     System.Console.WriteLine("Ingrese Nombre del Estudiante: ");
+    do 
+    { 
+       System.Console.WriteLine("Ingrese Nombre del Estudiante: ");
          nombre = Console.ReadLine();
+    }   while (!ValidarTexto(codigo, 6));     
 
            
     do
@@ -58,7 +60,17 @@ static string CalcularPrioridad(string tipoConsulta)
         
         return "Baja"; 
     }
-    
+
+    static bool ValidarTexto(string texto, int longitudMinima)
+    {
+        if (string.IsNullOrWhiteSpace(texto) || texto.Length < longitudMinima)
+        {
+            Console.WriteLine($"[ERROR] El campo no puede estar vacío y debe tener al menos {longitudMinima} caracteres.");
+            return false;
+        }
+        return true;
+    }
+
 
 
 
