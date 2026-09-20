@@ -21,16 +21,19 @@ static void Main()
            
     do
         {
-            
+          System.Console.WriteLine("Ingrese Tipo de Consulta: ");
+          tipoConsulta = Console.ReadLine().ToLower();
+        }   while (!ValidarTipoConsulta(tipoConsulta));
         
-         System.Console.WriteLine("Ingrese Tipo de Consulta: ");
-         tipoConsulta = Console.ReadLine().ToLower();
-        }while (!ValidarTipoConsulta(tipoConsulta));
 
          System.Console.WriteLine("Ingrese Descripción breve: ");
          descripcion = Console.ReadLine();
+
+        string prioridad = CalcularPrioridad(tipoConsulta);
      
  }
+
+
  static bool ValidarTipoConsulta(string tipo)
     {
         if (tipo == "matricula" || tipo == "pagos" || tipo == "constancia" || tipo == "plataforma" || tipo == "otros")
@@ -46,7 +49,16 @@ static void MostrarMenu()
         Console.WriteLine("\nTipos de consulta válidos:");
         Console.WriteLine("- matrícula\n- pagos\n- constancia\n- plataforma\n- otro");
     }
-
+static string CalcularPrioridad(string tipoConsulta)
+    {
+        if (tipoConsulta == "matrícula" || tipoConsulta == "pagos") 
+            return "Alta";
+        if (tipoConsulta == "plataforma") 
+            return "Media";
+        
+        return "Baja"; 
+    }
+    
 
 
 
