@@ -1,28 +1,31 @@
 ﻿
 class Sistema 
 {
-static void Main() // Requerimiento 9 Alcance de variables controlado (solo locales, no globales).
+static void Main() 
  {
      
-    System.Console.WriteLine("=== SISTEMA DE SOPORTE ACADÉMICO ===");
+      int solicitudesARegistrar = 3; // Requerimiento 10 Registrar al menos 3 solicitudes.
 
+      System.Console.WriteLine("=== SISTEMA DE SOPORTE ACADÉMICO ===");
+    for (int i = 1; i <= solicitudesARegistrar; i++)
+    {
 
       System.Console.WriteLine("\n--- Iniciando Registro de Solicitud  ---");
         string codigo = "", nombre = "", tipoConsulta = "", descripcion = "";
          MostrarMenu();
       
       
-    System.Console.WriteLine("Ingrese Código de Estudiante (mínimo 6 caracteres): ");
+      System.Console.WriteLine("Ingrese Código de Estudiante (mínimo 6 caracteres): ");
          codigo = Console.ReadLine();
       
-    do 
-    { 
+      do 
+      { 
        System.Console.WriteLine("Ingrese Nombre del Estudiante: ");
          nombre = Console.ReadLine();
-    }   while (!ValidarTexto(codigo, 6));     
+      }   while (!ValidarTexto(codigo, 6));     
 
            
-    do
+       do
         {
           System.Console.WriteLine("Ingrese Tipo de Consulta: ");
           tipoConsulta = Console.ReadLine().ToLower();
@@ -34,7 +37,7 @@ static void Main() // Requerimiento 9 Alcance de variables controlado (solo loca
 
         string prioridad = CalcularPrioridad(tipoConsulta);
         MostrarResumen(codigo, nombre, tipoConsulta, descripcion, prioridad);
-     
+    }   
  }
 
 
