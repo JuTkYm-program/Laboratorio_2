@@ -71,6 +71,17 @@ static string CalcularPrioridad(string tipoConsulta)
         return true;
     }
 
+    static void MostrarResumen(string cod, string nom, string tipo, string desc, string prio)
+    {
+    
+        Console.WriteLine("======RESUMEN DE SOLICITUD REGISTRADA======");
+        Console.WriteLine($"Código Estudiante : {cod}");
+        Console.WriteLine($"Nombre Estudiante : {nom}");
+        Console.WriteLine($"Tipo de Consulta  : {tipo}");
+        Console.WriteLine($"Descripción       : {desc}");
+        Console.WriteLine($"Prioridad Asignada: {prio}");
+        Console.WriteLine("============================================");
+    }
 
 
 
