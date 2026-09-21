@@ -1,4 +1,5 @@
-﻿class Sistema 
+﻿
+class Sistema 
 {
 static void Main()
  {
@@ -32,6 +33,7 @@ static void Main()
          descripcion = Console.ReadLine();
 
         string prioridad = CalcularPrioridad(tipoConsulta);
+        MostrarResumen(codigo, nombre, tipoConsulta, descripcion, prioridad);
      
  }
 
@@ -84,8 +86,10 @@ static string CalcularPrioridad(string tipoConsulta)
     }
 
 
-
 }
+
+
+
 
 
  
