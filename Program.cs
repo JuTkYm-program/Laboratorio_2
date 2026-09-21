@@ -84,8 +84,14 @@ static string CalcularPrioridad(string tipoConsulta)
         Console.WriteLine($"Prioridad Asignada: {prio}");
         Console.WriteLine("============================================");
     }
-
-
+   /*
+   REQUERIMIENTO 11 - REGISTRO DE PRUEBAS EJECUTADAS EN CONSOLA:
+   1. Datos válidos: Código "U123456", Nombre "Justin", Tipo "pagos" -> Ejecución OK.
+   2. Código vacío/inválido: Se ingresó "" -> El programa detectó el error y lo volvió a pedir OK.
+   3. Tipo incorrecto: Se ingresó "deportes" -> Mostró error de validación OK.
+   4. Prioridad alta: Se probó con "matrícula" -> El sistema le asignó prioridad Alta OK.
+   5. Prioridad baja: Se probó con "constancia" -> El sistema le asignó prioridad Baja OK.
+   */
 }
 
 
