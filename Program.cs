@@ -1,7 +1,7 @@
 ﻿
 class Sistema 
 {
-static void Main()
+static void Main() // Requerimiento 9 Alcance de variables controlado (solo locales, no globales).
  {
      
     System.Console.WriteLine("=== SISTEMA DE SOPORTE ACADÉMICO ===");
